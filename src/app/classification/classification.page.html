@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Classificació</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Classificació</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="container">
+    <ion-grid class="table">
+      <ion-row class="header">
+        <ion-col size = "5.6">Equip</ion-col>
+        <ion-col size = "0.8">J</ion-col>
+        <ion-col size = "0.8">G</ion-col>
+        <ion-col size = "0.8">E</ion-col>
+        <ion-col size = "0.8">P</ion-col>
+        <ion-col size = "0.8">gF</ion-col>
+        <ion-col size = "0.8">gC</ion-col>
+        <ion-col size = "0.8">gD</ion-col>
+        <ion-col size = "0.8">P</ion-col>
+      </ion-row>
+      <ion-row *ngFor="let row of classification" [ngClass]="{'row-gata': row.team === 'GATA F.S'}">
+        <ion-col size = "5.6">{{row.team}}</ion-col>
+        <ion-col size = "0.8">{{row.gamesPlayed}}</ion-col>
+        <ion-col size = "0.8">{{row.gamesWon}}</ion-col>
+        <ion-col size = "0.8">{{row.gamesDrawn}}</ion-col>
+        <ion-col size = "0.8">{{row.gamesLost}}</ion-col>
+        <ion-col size = "0.8">{{row.goalsFor}}</ion-col>
+        <ion-col size = "0.8">{{row.goalsAgainst}}</ion-col>
+        <ion-col size = "0.8">{{row.goalsFor - row.goalsAgainst}}</ion-col>  
+        <ion-col size = "0.8">{{row.points}}</ion-col>  
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

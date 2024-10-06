@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Resultats
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Resultats</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="container">
+
+    <div class="selects-container">
+      <ion-select [(ngModel)]="jornada" *ngIf="teamName === '' ">
+        <ion-select-option *ngFor="let jornada of jornades; let i = index" [value]="i">Jornada {{i + 1}}</ion-select-option>
+      </ion-select>
+  
+      <ion-select [(ngModel)]="teamName">
+        <ion-select-option value="">Sense filtre d'equip</ion-select-option>
+        <ion-select-option *ngFor="let team of teams" [value]="team">{{team}}</ion-select-option>
+      </ion-select>
+    </div>
+
+    <ion-list lines="inset" class="table">
+      <ion-item *ngFor="let result of filteredResults" [ngClass]="{'row-gata': result.localTeam === 'GATA F.S' || result.visitantTeam === 'GATA F.S'}">
+        <ion-label class="equip">{{result.localTeam}}</ion-label>
+        <ion-label class="mid">{{result.localGoals}}</ion-label>
+        <ion-label class="mid">-</ion-label>
+        <ion-label class="mid">{{result.visitantGoals}}</ion-label>
+        <ion-label class="equip">{{result.visitantTeam}}</ion-label>
+      </ion-item>
+    </ion-list>
+
+    <div *ngIf="teamName != '' " class="avis-select">
+      Per tornar al filtre per jornada, selecciona l'opció "Sense filtre d'equip" al desplegable.
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Estadístiques
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Estadístiques</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="container">
+    <ion-grid class="table">
+      <ion-row class="header">
+        <ion-col size = "7">Nom</ion-col>
+        <ion-col size = "1"><ion-icon name="football-outline"></ion-icon></ion-col>
+        <ion-col size = "1"><div class="icon groga"></div></ion-col>
+        <ion-col size = "1"><div class="icon groga doble"></div></ion-col>
+        <ion-col size = "1"><div class="icon roja"></div></ion-col>
+        <ion-col size = "1"><ion-icon name="ban-outline"></ion-icon></ion-col>
+      </ion-row>
+      <ion-row *ngFor="let player of playerStats">
+        <ion-col size = "7">{{player.name}}</ion-col>
+        <ion-col size = "1">{{player.goals}}</ion-col>
+        <ion-col size = "1">{{player.yellowCards}}</ion-col>
+        <ion-col size = "1">{{player.doubleYellowCards}}</ion-col>
+        <ion-col size = "1">{{player.redCards}}</ion-col>
+        <ion-col size = "1">{{player.suspendedMatches}}</ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

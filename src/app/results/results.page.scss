@@ -1,0 +1,29 @@
+.mid{
+    min-width: 1rem;
+    max-width: 1rem;
+    text-align: center;
+}
+
+.equip {
+    text-align: center;
+}
+
+.selects-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    gap: 1rem;
+}
+
+ion-select{
+    width: fit-content;
+}
+
+.avis-select {
+    margin-top: 1rem;
+    text-align: justify;
+}
+
+
+
+  

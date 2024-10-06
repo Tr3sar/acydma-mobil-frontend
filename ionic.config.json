@@ -1,0 +1,7 @@
+{
+  "name": "acydma-frontend",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,28 @@
+.table{
+    margin-bottom: 2rem;
+}
+
+ion-row{
+    text-align: center;
+    align-items: center;
+}
+
+ion-col{
+    font-size: 0.85rem;
+}
+
+.selects-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    gap: 1rem;
+}
+
+ion-select{
+    width: fit-content;
+}
+
+.avis-select {
+    margin-top: 1rem;
+    text-align: justify;
+}

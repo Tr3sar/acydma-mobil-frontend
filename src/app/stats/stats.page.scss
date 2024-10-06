@@ -1,0 +1,47 @@
+ion-col{
+    padding: 0;
+
+    
+    align-self: baseline;
+  
+    &:not(:first-child) {
+      text-align: -webkit-center;
+    }
+  }
+  
+  ion-row{
+    padding: 0.45rem 0 0.45rem 0;
+  
+    &:not(:last-child) {
+      border-bottom: 1px solid black;
+  
+      @media (prefers-color-scheme: dark) {
+        border-bottom: 1px solid white;
+      }
+    }
+  }
+  
+  .header{
+    padding: 1rem 0 1rem 0;
+  }
+
+  .icon {
+    width: 0.7rem;
+    height: 1rem;
+    border-radius: 0.085rem;
+}
+  
+  .groga {
+    background-color: rgba(255, 255, 0, 0.8);
+  }
+  
+  
+  .roja {
+    background-color: rgba(255, 0, 0, 0.8);
+  }
+
+  
+  .doble{
+    box-shadow: 2px -2px 0 0 rgba(255, 255, 0, 0.8);
+  }
+  
